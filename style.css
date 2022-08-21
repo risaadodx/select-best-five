@@ -11,3 +11,6 @@ h2 {
 p {
   color: grey;
 }
+.custom-orange {
+  color: rgba(255, 94, 25, 1);
+}
