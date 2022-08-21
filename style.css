@@ -5,3 +5,9 @@ header {
 h1 {
   color: rgba(255, 94, 25, 1);
 }
+h2 {
+  color: white;
+}
+p {
+  color: grey;
+}
