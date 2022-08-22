@@ -4,6 +4,29 @@ for (const select of selects) {
     const parent = event.target.parentNode;
     const getPlayer = parent.querySelector("h2");
     const player = getPlayer.innerText;
-    console.log(player);
+
+    const listContainer = document.getElementById("list-container");
+
+    const li = document.createElement("li");
+    li.innerText = player;
+
+    let listContainerLength = listContainer.childNodes.length;
+
+    if (listContainerLength <= 4) {
+      listContainer.appendChild(li);
+    } else {
+      return;
+    }
+
+    select.setAttribute("disabled", "true");
+    select.style.backgroundColor = "gray";
+
+    document
+      .getElementById("list-container")
+      .addEventListener("click", function (event) {
+        event.target.parentNode.removeChild(event.target);
+      });
+
+    console.log(listContainer.childNodes.length);
   });
 }

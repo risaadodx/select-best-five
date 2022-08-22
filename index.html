@@ -106,55 +106,58 @@
         </div>
         <div class="w-1/4">
           <div id="select-v" class="bg-gray-800 p-5 h-96">
-            <h1 class="text-xl font-bold">Select-V</h1>
-            <ol>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ol>
+            <h1 class="text-xl font-bold text-center">Select-V</h1>
+            <ol
+              id="list-container"
+              class="text-white text-xl list-decimal pl-5 mt-5"
+            ></ol>
           </div>
           <div class="bg-gray-800 p-5 mt-5">
             <h1 class="text-xl font-bold text-center">Budget</h1>
             <div class="flex justify-between items-center mt-5">
               <p>Per Player</p>
               <input
-                class="w-2/4 h-10 border border-1 border-gray-200 bg-transparent"
+                id="per-player-amount"
+                class="w-2/4 h-10 border border-1 border-gray-200 bg-transparent text-white p-5"
                 type="text"
               />
             </div>
             <div class="py-5">
-              <button class="py-1 bg-blue-600 text-white w-full">
+              <button id="calculate" class="py-1 bg-blue-600 text-white w-full">
                 Calculate
               </button>
             </div>
             <div class="flex justify-between items-center">
               <p>Player Expenses</p>
-              <p>$<span>00</span></p>
+              <p class="text-white">$<span id="player-expenses">00</span></p>
             </div>
             <div class="flex justify-between items-center mt-5">
-              <p>Per Player</p>
+              <p>Manager</p>
               <input
-                class="w-2/4 h-10 border border-1 border-gray-200 bg-transparent"
+                id="per-Manager-amount"
+                class="w-2/4 h-10 border border-1 border-gray-200 bg-transparent text-white p-5"
                 type="text"
               />
             </div>
             <div class="flex justify-between items-center mt-5">
-              <p>Per Player</p>
+              <p>Coach</p>
               <input
-                class="w-2/4 h-10 border border-1 border-gray-200 bg-transparent"
+                id="per-coach-amount"
+                class="w-2/4 h-10 border border-1 border-gray-200 bg-transparent text-white p-5"
                 type="text"
               />
             </div>
             <div class="py-5">
-              <button class="w-full py-1 bg-blue-600 text-white">
+              <button
+                id="calculate-total"
+                class="w-full py-1 bg-blue-600 text-white"
+              >
                 Calculate Total
               </button>
             </div>
             <div class="flex justify-between items-center">
               <p>Total</p>
-              <p class="custom-orange">$<span>00</span></p>
+              <p class="custom-orange">$<span id="grand-total">00</span></p>
             </div>
           </div>
         </div>
@@ -162,5 +165,6 @@
     </main>
 
     <script src="js/selectFive.js"></script>
+    <script src="js/budget.js"></script>
   </body>
 </html>
