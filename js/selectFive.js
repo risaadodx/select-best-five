@@ -15,7 +15,7 @@ for (const select of selects) {
     if (listContainerLength <= 4) {
       listContainer.appendChild(li);
     } else {
-      alert("cant't Select More then 5!");
+      alert("can't Select More then 5!");
       return;
     }
 
