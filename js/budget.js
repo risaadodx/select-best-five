@@ -1,8 +1,13 @@
+function getInputFieldValueById(inputId) {
+  const inputField = document.getElementById(inputId);
+  const inputFieldValueString = inputField.value;
+  const inputFieldValue = parseInt(inputFieldValueString);
+  return inputFieldValue;
+}
+
 document.getElementById("calculate"),
   addEventListener("click", function () {
-    const perPlayerAmountField = document.getElementById("per-player-amount");
-    const perPlayerAmountString = perPlayerAmountField.value;
-    const perPlayerAmount = parseInt(perPlayerAmountString);
+    const perPlayerAmount = getInputFieldValueById("per-player-amount");
 
     const playerExpensesField = document.getElementById("player-expenses");
     const previousPlayerExpensesString = playerExpensesField.innerText;
@@ -19,13 +24,9 @@ document.getElementById("calculate"),
 document
   .getElementById("calculate-total")
   .addEventListener("click", function () {
-    const perManagerAmountField = document.getElementById("per-Manager-amount");
-    const perManagerAmountString = perManagerAmountField.value;
-    const perManagerAmount = parseInt(perManagerAmountString);
+    const perManagerAmount = getInputFieldValueById("per-Manager-amount");
 
-    const perCoachAmountField = document.getElementById("per-coach-amount");
-    const perCoachAmountString = perCoachAmountField.value;
-    const perCoachAmount = parseInt(perCoachAmountString);
+    const perCoachAmount = getInputFieldValueById("per-coach-amount");
 
     const playerExpansesTotalField = document.getElementById("player-expenses");
     const playerExpansesTotalString = playerExpansesTotalField.innerText;
